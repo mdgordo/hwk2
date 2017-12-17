@@ -1,20 +1,3 @@
-% Problem 6: Consider using the following functions in your solution.
-%
-%   size        size of an array
-%   mean        computes the average or mean value
-%   svd         computes the singular value decomposition
-%   figure      creates a figure
-%   imshow      plots an image
-%   reshape     reshape array
-%   title       add title to plot
-%   scatter3    create 3-dimensional scatter plot
-%   pdist2      pairwise distance
-%   eye         identity matrix
-%   ones        vector of ones
-%
-clear all; close all; clc;
-
-
 %% Load data
 load('bunny.mat');
 
@@ -31,13 +14,14 @@ scatter3(1:10,1:10,1:10,24,1:10);
 colormap('jet')
 print('3d_scatter.png','-dpng');
 
-%% mean bunny
+%% plot 'mean' bunny image
 
 M=mean(X)
 imshow(reshape(M(1,:),sz),'initialmagnification','fit');
 title('Mean bunny');
 print('mean_bunny.png','-dpng');
 
+%% Implement MDS algorithm
 %% Centering
 
 C=bsxfun(@minus,X,M)

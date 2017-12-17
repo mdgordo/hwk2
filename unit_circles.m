@@ -1,3 +1,5 @@
+%% Plot unit circles using various distance metrics
+
 %% Euclidean
 fimplicit(@(x,y) x.^2+y.^2-1)
 grid on

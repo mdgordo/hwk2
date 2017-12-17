@@ -1,5 +1,4 @@
-clear all; close all; clc;
-
+%% Plot NYS cities based on distance matrix
 % Load data
 load('nycity.mat');
 
